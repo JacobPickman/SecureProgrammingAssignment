@@ -1,0 +1,8 @@
+Jim, 20997, true, 40, true, 9.25
+Todd, 30111, false, 37, false, 10.00
+Sam, 40459, false, 125, Two
+Bill, 00034, true, 500, One
+Fredrick, 70456, false, 60, Three
+Ted, 11111, true, 170, 5, Science
+Jimothy, 44020, false, 100, 1, Math
+Erik , 98976, true, 500, 6, Physics
