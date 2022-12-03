@@ -12,6 +12,8 @@ class TestEmployeeClasses(unittest.TestCase):
         self.assertFalse(test.getNum() == 1)
         self.assertFalse(test.getNum() == 0)
         
+        self.assertTrue(test.getWork())
+        self.assertFalse(test.getWork() == False)
         
         
 if __name__ == '__main__':
