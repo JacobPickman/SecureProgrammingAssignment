@@ -70,7 +70,7 @@ class Faculty(Employee):
         self.__dept = dept
 
     def getPay(self):
-        return (sal / week) * 2
+        return (self.__sal / self.__week) * 2
 
     def __str__(self):
         return super(Faculty, self).__str__() + "\tSalary: " + str(self.__sal) + "\tPay Period: " + str(self.__week) + " weeks\tDepartment: " + str(self.__dept)

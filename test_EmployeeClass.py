@@ -44,5 +44,15 @@ class TestEmployeeClasses(unittest.TestCase):
         
         testline = print(test)
         
+        
+    def testFaculty(self):
+        test = Faculty("Marshall", 55555, True, 100, 50, "Math")
+        self.assertTrue(test.getPay() == 4)
+        self.assertFalse(test.getPay() == 100)
+        self.assertFalse(test.getPay() == 200)
+        self.assertFalse(test.getPay()== 0)
+        self.assertFalse(test.getPay() == 1)
+        
+        testline = print(test)
 if __name__ == '__main__':
     unittest.main()
