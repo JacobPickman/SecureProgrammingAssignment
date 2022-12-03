@@ -22,5 +22,4 @@ for line in file:
 
 print("\t\t\t\t\t\tPay Table\n")
 for entry in employees:
-    print()
     print(entry, end = "")
