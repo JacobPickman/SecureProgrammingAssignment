@@ -33,12 +33,16 @@ class TestEmployeeClasses(unittest.TestCase):
         self.assertFalse(test.getPay() == 1)
         
         testLine = print(test)
-        #self.assertTrue(testLine == "Name: Teddy\tID: 20000\tCurrently Working: False\tHours Worked: 40\tEnrolled Workstudy: True\tPay Rate: 10")
-
-
         
         
+    def testClassifiedStaff(self):
+        test = ClassifiedStaff("Sammy", 99999, True, 100, "Three")
+        self.assertTrue(test.getPay() == 200)
+        self.assertFalse(test.getPay() == 100)
+        self.assertFalse(test.getPay() == 1)
+        self.assertFalse(test.getPay() == 0)
         
+        testline = print(test)
         
 if __name__ == '__main__':
     unittest.main()
