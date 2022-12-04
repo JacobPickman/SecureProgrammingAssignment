@@ -54,5 +54,7 @@ class TestEmployeeClasses(unittest.TestCase):
         self.assertFalse(test.getPay() == 1)
         
         testline = print(test)
+        
+        
 if __name__ == '__main__':
     unittest.main()
