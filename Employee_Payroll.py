@@ -14,15 +14,24 @@ def EmployeeAssignment(file):
         count+= 1
     return employees
 
-file = open(input("Enter file name: "), "r")
+x = 1
+while x  == 1:
+    try:
+        file = open(input("Enter file name: "), "r")
 
 
-numStu = input("Enter the number of students: ")
-numCS = input("Enter the number of Classified Staff: ")
-numFac = input("Enter the number of Faculty: ")
+        numStu = input("Enter the number of students: ")
+        numCS = input("Enter the number of Classified Staff: ")
+        numFac = input("Enter the number of Faculty: ")
 
-employees = EmployeeAssignment(file)
+        employees = EmployeeAssignment(file)
+        file.close()
 
-print("\t\t\t\t\t\tPay Table\n")
-for entry in employees:
-    print(entry)
+        print("\t\t\t\t\t\tPay Table\n")
+        for entry in employees:
+            print(entry)
+            
+        x = 0
+        
+    except:
+        print("There has been an error with the program. The file entered may not follow the appropriate format or could not be found. Plesae try again.")
