@@ -1,4 +1,5 @@
 from Employee_Class import Employee, StudentEmployee, ClassifiedStaff, Faculty
+import re
 
 def EmployeeAssignment(file):
     employees = []
@@ -14,15 +15,20 @@ def EmployeeAssignment(file):
         count+= 1
     return employees
 
+def safeSetData(classname):
+    pattern = re.compile("[0-9]+")
+    temp = input("Enter the number of  " + classname + ": ")
+    while not pattern.fullmatch(temp):
+            temp = input("Number of " + classname + " must be a non negative number. Following those rules, please try again by entering the number of  " + classname + ": ")
+    return temp
 x = 1
 while x  == 1:
     try:
         file = open(input("Enter file name: "), "r")
 
-
-        numStu = input("Enter the number of students: ")
-        numCS = input("Enter the number of Classified Staff: ")
-        numFac = input("Enter the number of Faculty: ")
+        numStu = safeSetData("Students")
+        numCS = safeSetData("Classified Staff")
+        numFac = safeSetData("Faculty")
 
         employees = EmployeeAssignment(file)
         file.close()
